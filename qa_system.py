@@ -2,7 +2,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.docstore.document import Document
-from Resume_Screener_app import groq_generate 
 
 class ResumeQASystem:
     def __init__(self):
