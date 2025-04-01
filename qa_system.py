@@ -2,7 +2,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.docstore.document import Document
-
+import os
 # Set up Groq API key
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
