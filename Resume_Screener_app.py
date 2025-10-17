@@ -329,7 +329,7 @@ def display_section_content(section: str, data: Dict[str, Any]):
         st.write(content)
 
 def main():
-    st.image("PragyanAI_Transperent.png")  
+    
     st.set_page_config(page_title="📄 AI Resume Screening", layout="wide")
 
     if "qa_system" not in st.session_state:
@@ -348,6 +348,7 @@ def main():
             st.session_state.qa_system.create_knowledge_base(st.session_state.resume_text)
             st.success("✅ Resume processed successfully!")
 
+    st.image("PragyanAI_Transperent.png") 
     st.header("🕵️ AI Detective: Investigate This Resume")
     tab1, tab2 = st.tabs(["🤖 AI-Powered Analysis", "📜 Resume Breakdown"])
 
