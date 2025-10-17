@@ -9,6 +9,9 @@ import torch
 import os
 #import groq
 from groq import Groq
+
+st.set_page_config(page_title="📄 AI Resume Screening", layout="wide")
+
 print(f"PyTorch version: {torch.__version__}")
 print(f"CUDA available: {torch.cuda.is_available()}")
 if torch.cuda.is_available():
@@ -329,9 +332,6 @@ def display_section_content(section: str, data: Dict[str, Any]):
         st.write(content)
 
 def main():
-    
-    st.set_page_config(page_title="📄 AI Resume Screening", layout="wide")
-
     if "qa_system" not in st.session_state:
         st.session_state.qa_system = ResumeQASystem()
     if "resume_text" not in st.session_state:
