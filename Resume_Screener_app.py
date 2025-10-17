@@ -5,15 +5,14 @@ import json
 from typing import Dict, Any, List, Optional 
 from qa_system import ResumeQASystem
 import streamlit.components.v1 as components
-
 import torch
+import os
+#import groq
+from groq import Groq
 print(f"PyTorch version: {torch.__version__}")
 print(f"CUDA available: {torch.cuda.is_available()}")
 if torch.cuda.is_available():
     print(f"Current device: {torch.cuda.get_device_name()}")
-import os
-#import groq
-from groq import Groq
 
 # Set up Groq API key
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
@@ -330,7 +329,7 @@ def display_section_content(section: str, data: Dict[str, Any]):
         st.write(content)
 
 def main():
-
+    st.image("PragyanAI_Transperent.png")  
     st.set_page_config(page_title="📄 AI Resume Screening", layout="wide")
 
     if "qa_system" not in st.session_state:
@@ -417,7 +416,6 @@ def main():
 
         else:
             st.warning("⚠️ Please upload a resume first.")
-
 
 if __name__ == "__main__":
     main()
