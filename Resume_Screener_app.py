@@ -12,14 +12,14 @@ print(f"CUDA available: {torch.cuda.is_available()}")
 if torch.cuda.is_available():
     print(f"Current device: {torch.cuda.get_device_name()}")
 import os
-import groq
+#import groq
 from groq import Groq
 
 # Set up Groq API key
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Initialize Groq client
-#groq_client = groq.Client(api_key=GROQ_API_KEY)
+# groq_client = groq.Client(api_key=GROQ_API_KEY)
 groq_client = Groq(api_key=GROQ_API_KEY)
 def groq_generate(prompt: str) -> str:
     """Send the prompt to Groq's API and get a response from LLAMA."""
